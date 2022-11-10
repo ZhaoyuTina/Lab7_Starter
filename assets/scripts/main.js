@@ -49,11 +49,11 @@ function initializeServiceWorker() {
     // B2. - Listen for the 'load' event on the window object.
     window.addEventListener("load", function() {
       // Steps B3-B6 will be *inside* the event listener's function created in B2
-      // B3. - Register '/sw.js' as a service worker (The MDN article
+      // B3. - Register './sw.js' as a service worker (The MDN article
       //            "Using Service Workers" will help you here)
 
       // STEPS B6 ONWARDS WILL BE IN /sw.js
-      navigator.serviceWorker.register("sw.js")
+      navigator.serviceWorker.register("./sw.js")
       .then(function(registration) {
         // B4. - Once the service worker has been successfully registered, console
         //            log that it was successful.
